@@ -1,0 +1,129 @@
+.header-container{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.111);
+}
+
+.header-logo{
+    cursor: pointer;
+    color: orange;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navigation{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-container{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-reservation{
+    padding: .4rem 1rem;
+    border-radius: 80px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #1E90FF;
+}
+.btn-toggel{
+    display: none;
+}
+.nav-link.active{
+    color:#1E90FF ;
+}
+.nav-link{
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+.nav-link:hover{
+    color: #1E90FF;
+}
+@media screen and (max-width:800px){
+    .header-container{
+        left: 0;
+        right: 0;
+        padding: 1rem ;
+    }
+    .header-container .btn-toggel{
+        display: block;
+        font-size: 1.5rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        width: 400px;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        bottom: 0;
+        flex-direction: column;
+        justify-content:center ;
+        gap: 5rem;
+        border-left: 1px solid rgba(0, 0, 0, 0.111);
+        background-color: whitesmoke;
+        transition: .4s;
+    }
+    .navigation.active{
+        right: 0;
+    }
+    .nav-container{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .btn-toggel{
+        position: fixed;
+        top: 1.6rem;
+        right: 1.2rem;
+        display: block;
+        z-index: 3;
+    }
+    .btn-toggel-icon{
+        cursor: pointer;
+        fill: orange;
+        font-size: 2.2rem;
+        transition: 0.6s;
+        z-index: 3;
+    }
+    .btn-toggel-icon:hover{
+        fill: black;
+    }
+    .btn-reservation{
+        width: 60%;
+        text-align: center;
+    }
+    .header-disaibled{  
+        cursor: no-drop;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: calc(100vw - 400px);
+        left:-100% ;
+        z-index: 1;
+        background-color: rgba(8, 0, 0, 0.207);
+        transition: .5s;
+    }
+    .header-disaibled.active{
+        left: 0rem;
+    }
+
+
+}

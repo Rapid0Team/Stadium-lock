@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --nav-height: 0px; /* Default value in case JavaScript doesn't set it */
+}
+
+
+*{
+
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.btn{
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+}

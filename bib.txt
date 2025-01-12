@@ -1,0 +1,1 @@
+npm install framer-motion axios react-icons react-router-dom swiper redux-devtools-extension html2canvas qrcode.react
