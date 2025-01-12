@@ -60,7 +60,7 @@ const Payment = () => {
                     <h1 className="mx-3 mb-5 font-bold ">Reservation successful!</h1>
                     <div className="mt-4" ref={qrCodeRef}>
                         <QRCodeCanvas
-                            value={`Temps: ${reservation_date}, Statut: ${status}, Heure de début: ${start_time}, Totale Hours ${totalHours} ,  Prix:${prix}  DH`} // Valeur du QR Code
+                            value={`Temps: ${reservation_date}, Statut: ${status}, Heure de debut: ${start_time}, Totale Hours ${totalHours} ,  Prix:${prix}  DH`} // Valeur du QR Code
                             size={200}
                             level="H"
                             includeMargin={true}
