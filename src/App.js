@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import Login from "./Pages/Users/login";
 import Profile from "./Pages/Users/profile";
 import Payment from "./Pages/payment/payment";
+import Spectateur from "./Pages/spectateur/spectateur"
 
 function Home() {
     return (
@@ -45,6 +46,7 @@ function App() {
                         <Route path="/payment" element={<Payment/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/profile" element={<Profile/>} />
+                        <Route path="/spectateur" element={<Spectateur/>} />
                     </Routes>
                 </div>
             </BrowserRouter>

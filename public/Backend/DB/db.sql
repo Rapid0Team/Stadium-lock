@@ -46,10 +46,10 @@ INSERT INTO sports(sport_name) VALUES ('Basketball');
 INSERT INTO sports(sport_name) VALUES ('Tennis');
 INSERT INTO sports(sport_name) VALUES ('Volleyball');
 
-INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('terrain1','footsalle.jpg', 200, 1);
-INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('terrain2','basketsalle.jpg', 200, 2);
-INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('terrain3','tennis.jpg', 200, 3);
-INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('terrain4','volley.jpg', 200, 4);
+INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('football','footsalle.jpg', 200, 1);
+INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('basketball','basketsalle.jpg', 200, 2);
+INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('tennis','tennis.jpg', 200, 3);
+INSERT INTO stadiums( stadium_name, photo, price, sport_id) VALUES ('volleyball','volley.jpg', 200, 4);
  
 
 INSERT INTO users( name, username, email, phone_number, password, role) VALUES ('mohamed','mohamed','mohamed@gmail.com','+2126333333','mohamed','user');

@@ -28,6 +28,7 @@ const Nav = () => {
                        
                     </nav>
                     <div className="btn-reservation btn"><Link to="/reserver">Reserver</Link></div>
+                    <div className="btn-reservation btn"><Link to="/spectateur">matches</Link></div>
                     {userlogin.username? <div className="btn-reservation btn"><Link to="/profile">profile</Link></div> : "" }
                 </div>
                 <div className="btn-toggel">
