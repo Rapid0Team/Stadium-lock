@@ -1,7 +1,7 @@
 import AboutSection from "./Pages/Home/AboutSection/AboutSection";
 import Feautures from "./Pages/Home/Feautures/Feautures";
 import HeroSection from "./Pages/Home/HeroSection/HeroSection";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Nav from "./Pages/Home/Nav/Nav";
 import './index.css'
 import ReserveForm from "./Pages/Reservation/reserveForm";
@@ -27,18 +27,12 @@ function Home() {
 }
 function App() {
 
-    useEffect(() => {
-        const nav = document.querySelector("#nav");
-        if (nav) {
-            document.documentElement.style.setProperty("--nav-height", `${nav.offsetHeight}px`);
-        }
-    }, []);
 
     return (
         <>
             <BrowserRouter>
-                <Nav/>
-                <div style={{ paddingTop: "var(--nav-height)", paddingBottom:"5em" }} >
+                <div><Nav/></div>
+                <div >
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/reserver" element={<ReserveForm />} />

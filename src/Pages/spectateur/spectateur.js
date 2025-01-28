@@ -8,7 +8,7 @@ export default function Spectateur() {
 
     useEffect(() => {
         axios
-            .get("http://localhost/projects/Stadium-lock/public/Backend/PHP/spectateur/spectateur.php")
+            .get("http://localhost/Stadium-lock/public/Backend/PHP/spectateur/spectateur.php")
             .then((res) => {
                 if (res.data.status === "success") {
                     setMatches(res.data.matches);
@@ -28,7 +28,7 @@ export default function Spectateur() {
       };
 
     return (
-        <div className="h-screen flex w-full flex-col  justify-center items-center bg-gray-50">
+        <div className="h-screen flex w-full flex-col  justify-center items-center bg-gray-50 sm:mt-[6rem] mt-[42rem]  ">
             <div className="bg-slate-100 rounded-lg shadow-lg px-6 py-4 w-full ">
                 {matches.length === 0 ? (
                     <p className="text-center text-gray-600">{message}</p>
@@ -40,7 +40,7 @@ export default function Spectateur() {
                                 className="p-4 bg-white border rounded-md shadow-sm flex flex-col items-center hover:shadow-lg hover:scale-105 transition-transform duration-300"
                             >
                                 <img
-                                    src={`http://localhost/projects/Stadium-lock/public/images/stades/${match.stadium_photo}`}
+                                    src={`http://localhost/Stadium-lock/public/images/stades/${match.stadium_photo}`}
                                     alt={match.stadium_name || "Stadium"}
                                     className="w-full h-40 object-cover rounded-md"
                                     onError={(e) => (e.target.src = "/default-placeholder.jpg")}
