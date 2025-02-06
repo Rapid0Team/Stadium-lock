@@ -13,7 +13,7 @@ export default function Login() {
         e.preventDefault(); // Empêche le rechargement de la page
         try {
             const response = await axios.post(
-                "http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/login.php",
+                "http://127.0.0.1/projects/Stadium-lock/public/Backend/PHP/user/login.php",
                 credentials
             );
             if (response.data.status === "success") {

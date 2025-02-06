@@ -11,7 +11,7 @@ export default function Register() {
         e.preventDefault(); // Empêche le rechargement de la page
         try {
             const response = await axios.post(
-                "http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/register.php",
+                "http://127.0.0.1/projects/Stadium-lock/public/Backend/PHP/user/register.php",
                 user
             );
             if (response.data.status === "succes") {

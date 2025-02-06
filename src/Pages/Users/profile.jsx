@@ -13,7 +13,7 @@ export default function Profile() {
     
     const Update = () => {
         axios
-            .post("http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/update.php", user)
+            .post("http://127.0.0.1/projects/Stadium-lock/public/Backend/PHP/user/update.php", user)
             .then((res) => {
                 if (res.data.status === "success") {
                    
