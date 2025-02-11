@@ -40,7 +40,7 @@ export default function ReserveForm() {
     // get data
     useEffect(() => {
         axios
-            .get("http://localhost/projects/stadium-lock/public/Backend/PHP/reservation/select.php")
+            .get("http://localhost/stadium-lock/public/Backend/PHP/reservation/select.php")
             .then((res) => {
                 if (res.data.status === "success") {
                     setSports(res.data.sports);
@@ -79,7 +79,7 @@ export default function ReserveForm() {
 
         // post data
         axios
-    .post('http://localhost/projects/stadium-lock/public/Backend/PHP/reservation/insert.php', formData, {
+    .post('http://localhost/stadium-lock/public/Backend/PHP/reservation/insert.php', formData, {
         headers: {
             'Content-Type': 'multipart/form-data', // Assurez-vous que le bon type de contenu est utilisé
         },

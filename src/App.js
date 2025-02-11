@@ -13,9 +13,10 @@ import Login from "./Pages/Users/login";
 import Profile from "./Pages/Users/profile";
 import Payment from "./Pages/payment/payment";
 import Spectateur from "./Pages/spectateur/spectateur"
-import Stadiums from "./Pages/stadiumsTable/stadiumsTable";
-import CreateStadium from "./Pages/stadiumsTable/createStadium";
-import UpdateStad from "./Pages/stadiumsTable/update";
+
+import Users from "./Allusers/Users";
+
+import Dashbord from "./Allusers/Dashbord";
 
 function Home() {
     return (
@@ -35,8 +36,21 @@ function App() {
         <>
             <BrowserRouter>
                 <div><Nav/></div>
+
+
+
                 <div >
                     <Routes>
+                   
+
+                    
+
+
+
+
+
+
+
                         <Route path="/" element={<Home />} />
                         <Route path="/reserver" element={<ReserveForm />} />
                         <Route path="/register" element={<Register />} />
@@ -44,9 +58,13 @@ function App() {
                         <Route path="/login" element={<Login/>} />
                         <Route path="/profile" element={<Profile/>} />
                         <Route path="/spectateur" element={<Spectateur/>} />
-                        <Route path="/stadiums" element={<Stadiums/>} />
-                        <Route path="/createStadium" element={<CreateStadium/>} />
-                        <Route path="/updateStad/:stadium_id" element={<UpdateStad/>} />
+
+                        <Route path="/daschbord" element={<Dashbord></Dashbord>}>
+                        <Route path="users" element={<Users></Users>}></Route>
+                        
+                        
+                        
+                        </Route>
                     </Routes>
                 </div>
             </BrowserRouter>

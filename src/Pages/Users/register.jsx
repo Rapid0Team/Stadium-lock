@@ -11,7 +11,7 @@ export default function Register() {
         e.preventDefault(); // Empêche le rechargement de la page
         try {
             const response = await axios.post(
-                "http://127.0.0.1/projects/Stadium-lock/public/Backend/PHP/user/register.php",
+                "http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/register.php",
                 user
             );
             if (response.data.status === "succes") {
@@ -28,8 +28,8 @@ export default function Register() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 h-[70%]">
+            <div className="bg-white p-8 rounded-lg *:h-[60%]   mt-[120px] shadow-lg w-full max-w-md">
                 <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h1>
                 <form onSubmit={handleRegister}>
                     <div className="mb-4">
