@@ -20,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mkdir($target_dir, 0777, true);
     }
 
-    $photo_name = time() . "_" . basename($_FILES["photo"]["name"]);
+    $photo_name =  basename($_FILES["photo"]["name"]);
     $target_file = $target_dir . $photo_name;
-    $photo_path = "public/images/" . $photo_name; 
+    $photo_path = $photo_name; 
 
     if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
         $query = "INSERT INTO stadiums (stadium_name, price, photo, sport_id) VALUES (?, ?, ?, ?)";

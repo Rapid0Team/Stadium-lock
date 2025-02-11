@@ -90,7 +90,7 @@ export default function UpdateStad() {
         <div className="w-full max-w-lg mx-auto bg-white p-6 mt-36 shadow-md rounded-lg">
             <h2 className="text-2xl font-semibold text-center mb-4">Update Stadium</h2>
             {message && <p className="text-center text-red-500">{message}</p>}
-            <form onSubmit={handleUpdate} encType="multipart/form-data">
+            <form onSubmit={handleUpdate} enctype="multipart/form-data">
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">Stadium Name</label>
                     <input
