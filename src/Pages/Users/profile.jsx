@@ -31,16 +31,15 @@ export default function Profile() {
 
     console.log(user)
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+        <div className="min-h-screen flex items-center justify-center bg-blue-500 p-3 ">
             {userlogin.username ? ( // Vérifiez si userlogin existe
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <div className="bg-white py-4 sm:mt-24 mt-20 px-8 sm:rounded-lg rounded   shadow-lg w-full max-w-md">
             <div className={`${activeUpdate? `hidden` :"" } `}>
                 <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Profile</h1>
                 
                     <div className="space-y-4">
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2">Nom :</label>
-                            <p className="text-gray-900">{userlogin.name}</p>
+                        <div className="flex  text-gray-700 text-sm font-bold mb-2">
+                            <label className="pr-5" >Nom  :</label><label className="">{userlogin.name}</label>
                         </div>
                         <div>
                             <label className="block text-gray-700 text-sm font-bold mb-2">Username :</label>

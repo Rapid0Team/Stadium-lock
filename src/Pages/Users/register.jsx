@@ -28,8 +28,8 @@ export default function Register() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 h-[70%]">
-            <div className="bg-white p-8 rounded-lg *:h-[60%]   mt-[120px] shadow-lg w-full max-w-md">
+        <div className="min-h-screen flex items-center p-2 justify-center bg-blue-500 ">
+            <div className="bg-white py-2 sm:mt-24 mt-20 px-8 sm:rounded-lg rounded   shadow-lg w-full max-w-md  ">
                 <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h1>
                 <form onSubmit={handleRegister}>
                     <div className="mb-4">
@@ -108,8 +108,7 @@ export default function Register() {
                     >
                         Register
                     </button>
-                </form>
-                <div className="mt-4 text-center">
+                <div className="mt-3 pb-5 text-center">
                     <p className="text-gray-600">
                         Already have an account?{" "}
                         <Link to="/login" className="text-blue-600 hover:underline">
@@ -117,6 +116,7 @@ export default function Register() {
                         </Link>
                     </p>
                 </div>
+                </form>
                 {msg && <p className="mt-4 text-center text-red-500">{msg}</p>}
             </div>
         </div>

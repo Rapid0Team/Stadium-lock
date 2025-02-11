@@ -14,20 +14,31 @@ export default function Login() {
         try {
             const response = await axios.post(
                 "http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/login.php",
-                credentials
+                 credentials
             );
             if (response.data.status === "success") {
-                setMsg(response.data.message); // Affiche un message de succès
-                navigate("/reserver");
-                if(response.data.user.role==="admine"){
-                    navigate('/home')
-                } // Redirige vers la page de réservation
+                setMsg(response.data.message);
+                if(response.data.user.role === 'user'){
+                    navigate("/reserver");
+                    dispatch({
+                    type: "login",
+                    payload: response.data.user,
+
+                });
+                }
+                else{
+                    navigate('/stadiums');
+                    dispatch({
+                        type: "admin",
+                        payload: response.data.user,
+                        
+                    });
+                    
+                }
+                 // Redirige vers la page de réservation
 
                 // Dispatch l'action "login" avec les données de l'utilisateur
-                dispatch({
-                    type: "login",
-                    payload: response.data.user, // Utilisez response.data.user directement
-                });
+                
             } else {
                 // Si la connexion échoue, affiche un message d'erreur
                 setMsg(response.data.message);
@@ -39,8 +50,8 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen flex items-center h-screen justify-center bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <div className="min-h-screen flex items-center h-screen justify-center  bg-blue-500">
+            <div className="bg-white p-8 rounded-lg shadow-xl  w-full max-w-md">
                 <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Login</h1>
                 <form onSubmit={handleLogin}>
                     <div className="mb-4">

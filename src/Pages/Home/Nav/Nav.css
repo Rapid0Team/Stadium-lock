@@ -39,12 +39,6 @@
     font-weight: 400;
     background-color: #1E90FF;
 }
-.btn-reservation:hover{
-    padding: .5rem 2rem;
-    background-color: #4990d2;
-    transition: 0.5em;
-    
-}
 .btn-toggel{
     display: none;
 }

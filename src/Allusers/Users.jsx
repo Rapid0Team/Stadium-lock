@@ -10,7 +10,7 @@ function Users() {
 
   useEffect(() => {
 
-    axios.get('http://localhost/Stadium-lock/public/Backend/PHP/user/getusers.php')
+    axios.get('http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/getusers.php')
 
       .then((response) => {
         console.log(response.data.users); // Debugging
@@ -22,7 +22,7 @@ function Users() {
 
   async function deleteUser(user_id) {
     try {
-      let res = await axios.post('http://localhost/Stadium-lock/public/Backend/PHP/user/deleteUsers.php', {
+      let res = await axios.post('http://127.0.0.1/Stadium-lock/public/Backend/PHP/user/deleteUsers.php', {
         user_id:  user_id 
       });
       console.log(user_id )
